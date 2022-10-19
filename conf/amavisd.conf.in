@@ -400,8 +400,7 @@ $banned_filename_re = new_RE(
            ['lrzip -q -k -d -o -', 'lrzcat -q -k'] ],
   ['lzo',  \&do_uncompress, 'lzop -d'],
   ['rpm',  \&do_uncompress, ['rpm2cpio.pl', 'rpm2cpio'] ],
-  [['cpio','tar'], \&do_pax_cpio, ['pax', 'gcpio', 'cpio'] ],
-           # ['/usr/local/heirloom/usr/5bin/pax', 'pax', 'gcpio', 'cpio']
+  [['cpio','tar'], \&do_pax_cpio, ['pax'] ],
   ['deb',  \&do_ar, 'ar'],
 # ['a',    \&do_ar, 'ar'],  # unpacking .a seems an overkill
   ['rar',  \&do_7zip, ['7z'] ],
